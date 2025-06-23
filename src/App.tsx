@@ -42,6 +42,11 @@ function App() {
 
             <TabPanel>
               <Timeline articles={[{
+                header: 'AutoLine AC',
+                date: '2025-Present',
+                contents: <p>Working on improvements to Auto Loan dashboard (Django, React), includingimprovements to automated reporting and Amazon API.</p>
+              },
+                {
                 header: 'Fujifilm',
                 date: '2021-2024',
                 contents: <p>Did work on photo kiosk software (NodeJS/.NET). Worked on both the front end and backend teams.</p>
