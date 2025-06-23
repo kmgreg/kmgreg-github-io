@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import GitHubButton from 'react-github-btn';
 import 'react-tabs/style/react-tabs.css';
@@ -16,6 +16,12 @@ function App() {
     'margin-left': "10px"
   }
 
+  const [pageName, setPageName] = useState("Kurt's Home");
+
+  useEffect(() => {
+    document.title = pageName;
+  })
+
   const articleContents = <p></p>
   
   return (
@@ -25,9 +31,9 @@ function App() {
         <p>
           <Tabs>
             <TabList>
-              <Tab style={tabStyling}>Home</Tab>
-              <Tab style={tabStyling}>CV</Tab>
-              <Tab style={tabStyling}>Contact</Tab>
+              <Tab style={tabStyling} onClick={() => setPageName("Kurt's Home")}>Home</Tab>
+              <Tab style={tabStyling} onClick={() => setPageName("Kurt's CV")}>CV</Tab>
+              <Tab style={tabStyling} onClick={() => setPageName("Kurt's Contact Info")}>Contact</Tab>
             </TabList>
 
             <TabPanel>
@@ -44,7 +50,7 @@ function App() {
               <Timeline articles={[{
                 header: 'AutoLine AC',
                 date: '2025-Present',
-                contents: <p>Working on improvements to Auto Loan dashboard (Django, React), includingimprovements to automated reporting and Amazon API.</p>
+                contents: <p>Working on improvements to Auto Loan dashboard (Django, React), including improvements to automated reporting and Amazon API.</p>
               },
                 {
                 header: 'Fujifilm',
