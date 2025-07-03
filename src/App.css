@@ -73,3 +73,16 @@
     transform: rotate(360deg);
   }
 }
+
+.TabPanelActive {
+  transform: translateX(0);
+  transition: transform 0.5s ease-out;
+}
+
+.TabPanelLeft {
+  transform: translateX(-100%);
+}
+
+.TabPanelRight {
+  transform: translateX(100%);
+}

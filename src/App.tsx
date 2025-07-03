@@ -17,19 +17,31 @@ function App() {
   }
 
   const [pageName, setPageName] = useState("Kurt's Home");
+  const [tabIndex, setTabIndex] = useState(0);
+  const [tabPanelClass, setTabPanelClass] = useState('TabPanelActive')
 
   useEffect(() => {
     document.title = pageName;
   })
 
   const articleContents = <p></p>
+
+  const setTab = (index : number) => {
+    if (tabIndex > index) {
+      setTabPanelClass('TabPanelRight')
+    } else {
+      setTabPanelClass('TabPanelLeft')
+    }
+    setTimeout(() => setTabPanelClass('TabPanelActive'), 1); // dumb but works
+    setTabIndex(index)
+  }
   
   return (
     <div className="App">
       <header className="App-header">
         <BannerHeader text={'Kurt\'s Homepage'} image={banner} textColor='black'></BannerHeader>
         <p>
-          <Tabs>
+          <Tabs selectedIndex={tabIndex} onSelect={(index)=> {setTab(index)}} >
             <TabList>
               <Tab style={tabStyling} onClick={() => setPageName("Kurt's Home")}>Home</Tab>
               <Tab style={tabStyling} onClick={() => setPageName("Kurt's CV")}>CV</Tab>
@@ -37,7 +49,7 @@ function App() {
               <Tab style={tabStyling} onClick={() => setPageName("Kurt's Contact Info")}>Contact</Tab>
             </TabList>
 
-            <TabPanel>
+            <TabPanel className={tabPanelClass}>
             <div className='textblockContainer'>
               <h2 style={{padding: '20px'}}>Welcome to My Site (v2)!</h2>
               <p style={{margin: '20px', padding: '20px'}}>
@@ -47,7 +59,7 @@ function App() {
               </div>
             </TabPanel>
 
-            <TabPanel>
+            <TabPanel className={tabPanelClass}>
               <Timeline articles={[{
                 header: 'AutoLine AC',
                 date: '2025-Present',
@@ -64,7 +76,7 @@ function App() {
               }]}></Timeline>
             </TabPanel>
 
-            <TabPanel>
+            <TabPanel className={tabPanelClass}>
               <div className='textblockContainer'>
               <h2 style={{padding: '20px'}}>Projects</h2>
               <p style={{margin: '20px', padding: '20px'}}>
@@ -73,7 +85,7 @@ function App() {
               </div>
             </TabPanel>
 
-            <TabPanel>
+            <TabPanel className={tabPanelClass}>
               <div className='textblockContainer' style={{}}><h2>Contact Me</h2>
               <ul style={{listStyleType: 'none', display: 'inline-block', textAlign: 'left'}}>
               <li className='contact-link'>
