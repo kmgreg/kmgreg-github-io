@@ -3,7 +3,8 @@ import { timelineEntryProps } from "../types"
 export default function TimelineEntry (props: timelineEntryProps) {
 
     const listyle = {
-        width: '50vw'
+        width: '50vw',
+        // boxShadow: '10px 10px'
     }
 
     const textBlockStyle = {

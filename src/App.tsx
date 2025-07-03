@@ -33,6 +33,7 @@ function App() {
             <TabList>
               <Tab style={tabStyling} onClick={() => setPageName("Kurt's Home")}>Home</Tab>
               <Tab style={tabStyling} onClick={() => setPageName("Kurt's CV")}>CV</Tab>
+              <Tab style={tabStyling} onClick={() => setPageName("Kurt's Projects")}>Projects</Tab>
               <Tab style={tabStyling} onClick={() => setPageName("Kurt's Contact Info")}>Contact</Tab>
             </TabList>
 
@@ -41,7 +42,7 @@ function App() {
               <h2 style={{padding: '20px'}}>Welcome to My Site (v2)!</h2>
               <p style={{margin: '20px', padding: '20px'}}>
                 This is the homepage for Kurt Gregorek. 
-                Welcome. No longer using FrontPage, unfortunately.
+                Welcome.
               </p>
               </div>
             </TabPanel>
@@ -61,6 +62,15 @@ function App() {
                 date: '2020',
                 contents: <p>Worked on the intern team. Did work on the <a href='https://github.com/Vantiv'>customer facing SDKS</a> and some internal security improvements.</p>
               }]}></Timeline>
+            </TabPanel>
+
+            <TabPanel>
+              <div className='textblockContainer'>
+              <h2 style={{padding: '20px'}}>Projects</h2>
+              <p style={{margin: '20px', padding: '20px'}}>
+                Coming Soon...
+              </p>
+              </div>
             </TabPanel>
 
             <TabPanel>
