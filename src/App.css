@@ -80,9 +80,9 @@
 }
 
 .TabPanelLeft {
-  transform: translateX(-100%);
+  transform: translateX(100%);
 }
 
 .TabPanelRight {
-  transform: translateX(100%);
+  transform: translateX(-100%);
 }
