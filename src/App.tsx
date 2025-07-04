@@ -82,8 +82,8 @@ function App() {
                   date: null,
                   contents: <div>
                       <p>Here are some tools based on <a href='https://www.absolutelyunderstandguitar.com/'>Absolutely Understand Guitar:</a></p>
-                      <p><a href='/chordtrainer'>Chord Trainer</a></p>
-                      <p><a href='/sliderule'>Slide Rule</a></p>
+                      <p><a href='/#/chordtrainer'>Chord Trainer</a></p>
+                      <p><a href='/#/sliderule'>Slide Rule</a></p>
                     </div>
                 }
               ]}></Timeline>

@@ -5,28 +5,21 @@ import App from './App';
 import ChordApp from './components/chordtrainer/chordapp';
 import SlideRule from './components/sliderule/sliderule';
 import reportWebVitals from './reportWebVitals';
-import { createBrowserRouter, RouterProvider } from 'react-router';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 
-const router = createBrowserRouter([
-  {
-    path: '/',
-    element: <App />
-  }, {
-    path: 'chordtrainer',
-    element: <ChordApp />
-  }, {
-    path: 'sliderule',
-    element: <SlideRule />
-  }
-])
-
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <HashRouter>
+      <Routes>
+        <Route path='/' element={<App/>} />
+        <Route path='/chordtrainer' element={<ChordApp/>} />
+        <Route path='/sliderule' element={<SlideRule/>} />
+      </Routes>
+    </HashRouter>
   </React.StrictMode>
 );
 
