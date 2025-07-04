@@ -23,6 +23,7 @@ const router = createBrowserRouter([
     element: <SlideRule />
   }
 ])
+
 root.render(
   <React.StrictMode>
     <RouterProvider router={router} />
