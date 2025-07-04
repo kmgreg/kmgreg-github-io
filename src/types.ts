@@ -19,7 +19,7 @@ export type timelineEntryProps = {
 
 export type articleData = {
     header: string,
-    date: string,
+    date: string | null,
     contents: ReactElement
 }
 

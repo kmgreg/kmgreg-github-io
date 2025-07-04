@@ -77,12 +77,16 @@ function App() {
             </TabPanel>
 
             <TabPanel className={tabPanelClass}>
-              <div className='textblockContainer'>
-              <h2 style={{padding: '20px'}}>Projects</h2>
-              <p style={{margin: '20px', padding: '20px'}}>
-                Coming Soon...
-              </p>
-              </div>
+              <Timeline articles={[
+                { header: 'Absolutely Understand Guitar Exercises',
+                  date: null,
+                  contents: <div>
+                      <p>Here are some tools based on <a href='https://www.absolutelyunderstandguitar.com/'>Absolutely Understand Guitar:</a></p>
+                      <p><a href='/chordtrainer'>Chord Trainer</a></p>
+                      <p><a href='/sliderule'>Slide Rule</a></p>
+                    </div>
+                }
+              ]}></Timeline>
             </TabPanel>
 
             <TabPanel className={tabPanelClass}>
