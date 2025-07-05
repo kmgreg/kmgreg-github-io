@@ -35,7 +35,7 @@ function ChordApp () {
         <div className='textblockContainer' style={baseStyle}>
             <a href='/' style={{display: 'inline-block', width: '10%'}}>Back</a>
             <p style={{display: 'inline-block', width: '90%'}}>Coming Soon...</p>
-            <div style={{height: '400px', width: '200px', background: 'white', margin: 'auto'}}>
+            <div style={{height: '200px', width: '200px', background: 'white', margin: 'auto'}}>
                 <Chord chord={activeChord} instrument={activeInstrument} lite={true}/>
             </div>
         </div>

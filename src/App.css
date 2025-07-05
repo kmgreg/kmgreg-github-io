@@ -86,3 +86,37 @@
 .TabPanelRight {
   transform: translateX(-100%);
 }
+
+.SlideButton {
+  background-color: white;
+  box-shadow: 4px 4px;
+  height: 60px;
+  width: 60px;
+}
+
+.SlideButton.clicked {
+  background-color: gray;
+  box-shadow: none;
+}
+
+.ScaleBlock {
+  background-color: white;
+  font: 20px Arial, sans-serif;
+  margin-left: 0px;
+  margin-right: 0px;
+  display: inline-block;
+  width: 40px;
+  height: 45px;
+  outline: solid;
+}
+
+.ScaleBlock.empty {
+  background-color: black;
+}
+
+.ScaleRow {
+  column-gap: 0;
+  grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto ;
+  display: grid;
+  width: auto;
+}

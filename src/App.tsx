@@ -78,7 +78,7 @@ function App() {
 
             <TabPanel className={tabPanelClass}>
               <Timeline articles={[
-                { header: 'Absolutely Understand Guitar Exercises',
+                { header: 'Absolutely Understand Guitar Resources',
                   date: null,
                   contents: <div>
                       <p>Here are some tools based on <a href='https://www.absolutelyunderstandguitar.com/'>Absolutely Understand Guitar:</a></p>

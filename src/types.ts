@@ -26,3 +26,8 @@ export type articleData = {
 export type timelineProps = {
     articles: articleData[]
 }
+
+export type scale = {
+    name: string,
+    intervals: number[]
+}
